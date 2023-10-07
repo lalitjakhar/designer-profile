@@ -2,10 +2,10 @@ import React from 'react';
 import { Grid, Typography } from '@mui/material';
 import { Box } from '@mui/material';
 import { Stack } from '@mui/material';
-import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { Button, CardActionArea, CardActions } from '@mui/material';
+import CardPic from '../../Assets/Cardpic.jpg';
 
 export default function Home() {
     return (
@@ -23,31 +23,34 @@ export default function Home() {
                     </Grid>
                     <Grid item xs={5} sx={{ backgroundColor: '#3d4801', height: '100wh' }}>
                         <Box container sx={{ backgroundColor: '#d9f7c9', height: '75%', margin: '100px 120px 100px -68px;' }}>
-                            <Box sx={{ padding: '30px' }}>
-                                <Card sx={{ maxWidth: 345 }}>
-                                    <CardActionArea>
-                                        <CardMedia
-                                            component="img"
-                                            height="140"
-                                            image="/static/images/cards/contemplative-reptile.jpg"
-                                            alt="green iguana"
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                                Lizard
-                                            </Typography>
-                                            <Typography variant="body2" color="text.secondary">
-                                                Lizards are a widespread group of squamate reptiles, with over 6,000
-                                                species, ranging across all continents except Antarctica
-                                            </Typography>
-                                        </CardContent>
-                                    </CardActionArea>
-                                    <CardActions>
-                                        <Button size="small" color="primary">
-                                            Share
-                                        </Button>
-                                    </CardActions>
-                                </Card>
+                            <Box sx={{ padding: '30px'}}>
+                                <CardActionArea sx={{display:'flex', justifyContent:'center'}}>
+                                    <CardMedia
+                                        component="img"
+                                        image={CardPic}
+                                        alt="green iguana"
+                                        sx={{ borderRadius: '50%', width: '150px', height: '150px' ,display:'flex', justifyContent:'center'}}
+                                    />
+                                    <CardContent direction='column'>
+                                        <Typography gutterBottom variant="h4" component="div">
+                                            Nusaiba Safeena
+                                        </Typography>
+                                        <Typography gutterBottom variant="h5" component="div" sx={{color:'#28402e'}}>
+                                            UX / UI Designer
+                                        </Typography>
+                                        <Typography variant="body1" color="text.secondary">
+                                            Ui is the saddle,the stirrups & the reins. UX is the feeling you get being able to ride the horse.
+                                        </Typography>
+                                    </CardContent>
+                                </CardActionArea>
+                                <CardActions>
+                                    <Button variant='contained' sx={{ backgroundColor: '#3d4801', justifyContent:'center'}}>
+                                        Follow
+                                    </Button>
+                                </CardActions>
+                                <Box sx={{display:'flex',justifyContent:'center', height:'100px', width:'50%',backgroundColor:'white'}}>
+
+                                </Box>
                             </Box>
                         </Box>
                     </Grid>
