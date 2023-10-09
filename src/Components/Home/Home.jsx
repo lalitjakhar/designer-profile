@@ -9,11 +9,10 @@ import CardPic from "../../Assets/Cardpic.jpg";
 import Rating from "@mui/material/Rating";
 
 export default function Home() {
-  //   function BasicRating() {
-  const [value, setValue] = React.useState("");
+  const [value, setValue] = React.useState("2");
   return (
     <>
-      <Box sx={{ backgroundColor: "black", padding: "100px", height: "96vh" }}>
+      <Box sx={{ backgroundColor: "black", padding: "100px" }}>
         <Grid
           container
           lg={12}
@@ -27,7 +26,6 @@ export default function Home() {
             sx={{
               backgroundColor: "#ede6e6",
               gap: "10px",
-              height: "100vh",
               justifyContent: "center",
               alignItems: "center",
             }}
@@ -42,7 +40,7 @@ export default function Home() {
           <Grid
             item
             xs={5}
-            sx={{ backgroundColor: "#3d4801", height: "100wh" }}
+            sx={{ backgroundColor: "#141800" }}
           >
             <Box
               container
@@ -60,7 +58,7 @@ export default function Home() {
                     <CardMedia
                       component="img"
                       image={CardPic}
-                      alt="green iguana"
+                      alt="green lady profile"
                       sx={{
                         borderRadius: "50%",
                         width: "150px",
@@ -100,11 +98,15 @@ export default function Home() {
                         onChange={(event, newValue) => {
                           setValue(newValue);
                         }}
+                        sx={{
+                          display: 'flex',
+                          justifyContent: 'center'
+                        }}
                       />
                       <Typography
                         variant="body1"
                         color="text.secondary"
-                        sx={{ fontSize: "19px", letterSpacing: "1px" }}
+                        sx={{ fontSize: '16px', paddingTop: '10px' }}
                       >
                         Ui is the saddle,the stirrups & the reins. UX is the
                         feeling you get being able to ride the horse.
@@ -112,26 +114,22 @@ export default function Home() {
                     </CardContent>
                   </Stack>
                 </CardActionArea>
-                <CardActions>
+                <CardActions sx={{ display: 'flex', justifyContent: 'center' }}>
                   <Button
                     variant="contained"
-                    sx={{
-                      backgroundColor: "#3d4801",
-                      justifyContent: "center",
-                    }}
+                    color="success"
+                    sx={{ paddingBlock: '11px', paddingInline: '60px' }}
                   >
                     Follow
                   </Button>
                 </CardActions>
                 <Box
                   sx={{
+                    marginTop: '10px',
                     display: "flex",
-                    justifyContent: "center",
-                    height: "100px",
-                    width: "50%",
+                    justifyContent: "space-evenly",
                     backgroundColor: "white",
-                    padding: "20px",
-                    gap: "30px",
+                    gap: "50px",
                   }}
                 >
                   <Box columns={3}>
@@ -167,4 +165,3 @@ export default function Home() {
     </>
   );
 }
-// }
